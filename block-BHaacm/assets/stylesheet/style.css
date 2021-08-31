@@ -1,0 +1,262 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* variables */
+:root {
+    --header-bg:rgb(33,41,70);
+    --hero-bg:rgb(233,237,253);
+    --btn-bg:rgb(55,182,102);
+    --icon-bg:rgb(188,192,209);
+    --text-pri:rgb(2,4,17);
+    --text-sec:rgb(150,151,156);
+    --white:rgb(255,255,255);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+p, a {
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Besley', serif;
+}
+/* My reset */
+
+body {
+    line-height: 1.5;
+
+}
+
+/* General */
+
+.container {
+    max-width: 1189px;
+    width: 100%;
+    margin: 0 auto;    
+}
+.width-full {
+    width: 100%;
+}
+.btn {
+    background-color: var(--btn-bg);
+    color:var(--white) ;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: inline-block;
+}
+.btn-primary {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+}
+.btn-secondary {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+    margin-top: 0.9rem;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+}
+.nav-item .active  {
+    color: var(--btn-bg);
+}
+.padding {
+    padding: 3rem 0;
+}
+.font-0 {
+    font-size: 0;
+}
+.text-center {
+    text-align: center;
+}
+/* Flex */
+
+.flex {
+    display: flex;
+}
+.space-btw {
+    justify-content: space-between;
+}
+.item-center {
+    align-items: center;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Column */
+
+.flex-50 {
+    flex: 0 1 50%;
+}
+.flex-45 {
+    flex: 0 1 48%;
+}
+.flex-30 {
+    flex: 0 1 30%;
+} 
+.flex-50 {
+    flex: 0 1 50%;
+}
+
+/* Header */
+
+.header {
+    background-color: var(--header-bg);
+    padding: 1rem 0;
+  
+}
+.header a {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.nav-item {
+    margin-left: 2rem;
+    color: var(--white);
+
+}
+.nav-item a {
+    color: var(--white);
+    font-weight: 600;
+}
+.nav-item a:hover {
+    color: var(--btn-bg);
+}
+
+/* Hero */
+
+.hero {
+    background-color: var(--hero-bg);
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-pri);
+}
+.hero p {
+    font-size: 1rem;
+    color: var(--text-sec);
+    margin: 1rem 0;
+}
+
+
+/* Blog */
+
+h2 {
+    color: var(--text-pri);
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 1.5rem;
+    color: var(--text-pri);
+    margin: 0.9rem 0;
+    font-weight: 600;
+}
+.blog p {
+    font-size: 0.7rem;
+    color: var(--text-sec);
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--header-bg);
+    padding: 1rem 10rem;
+}
+small {
+    font-size: 1.3rem;
+    color: rgb(188,192,209);
+}
+.copy {
+    margin-right: 0.5rem ;
+}
+.social-media-container a {
+    color: rgb(188,192,209);
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+@media screen and  (max-width: 800px){
+    
+    .html {
+        font-size: 10px;
+    }
+    .container {
+        padding: 1rem;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-45, .flex-30 {
+        flex: 1 1 100%;
+        margin: 1rem 0;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+    .padding-tb {
+        padding: 1rem 0;
+    }
+    
+}

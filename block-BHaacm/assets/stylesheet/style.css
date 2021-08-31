@@ -236,12 +236,24 @@ small {
     margin-left: 1.5rem;
 }
 
-@media screen and  (max-width: 800px){
+@media screen and (max-width:592px){
+    .container {
+        max-width: 550px;
+    }
+}
+@media screen and (max-width:992px){
+    .container {
+        max-width: 940px;
+    }
+}
+
+@media screen and  (max-width: 768px){
     
     .html {
         font-size: 10px;
     }
     .container {
+        max-width: 720px;
         padding: 1rem;
     }
     .flex-wrap {
@@ -257,6 +269,12 @@ small {
     }
     .padding-tb {
         padding: 1rem 0;
+    }
+    .order-1 {
+        order: 1;
+    }
+    .nav-item, .social-media-container a{
+        margin: 1rem 1rem;
     }
     
 }
